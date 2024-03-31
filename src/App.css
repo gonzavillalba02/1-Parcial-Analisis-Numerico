@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+.header {
+  width: 91%;
+  margin: 3vh auto;
+  padding: 3vh 0;
+  border-radius: 15px;
+  background: #F83C86;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nombre {
+  margin: 0 0 0 2vw;
+  display: inline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.docu {
+  margin: 0 2vw 0 0;
+  display: inline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  width: 90%;
+  margin: 7vh auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputFuncion {
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 44.5%;
+  font-size: 1.5em;
+  font-family: "Inter", sans-serif;
+  color: #000;
+  transition: border-color .3s;
+}
+
+.inputFuncion:focus{
+  outline: none;
+  border-bottom: 1px solid #F83C86;
+}
+
+.containerButtons {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.containerButtons button {
+  background: #fff;
+  border: 1px solid #F83C86;
+  border-radius: 20px;
+  padding: 1vh 1.5vw;
+  font-size: 1.3vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.boton-activo {
+  background: #FECCE3 !important;
+  font-weight: 600 !important;
+  color: #fff;
+}
+
+.abajo {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.abajoPrimero {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.abajoPrimero p {
+  font-family: "Inter", sans-serif;
+  max-width: 42vw;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+.abajoPrimero-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 3vh 0;
+}
+
+.abajoPrimero-inputs input {
+  border: none;
+  border-bottom: 1px solid #000;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  transition: border-color .3s;
+}
+
+.abajoPrimero-inputs input:focus {
+  outline: none;
+  border-color: #F83C86;
+}
+
+.calcular {
+  background: #F83C86;
+  border: none;
+  padding: 1.5vh 0;
+  border-radius: 15px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  cursor: pointer;
+  margin:1vh 0 3vh 0;
+}
+
+.results {
+  border: 1px solid #F83C86;
+  padding: 0 2vw;
+  max-width: 38vw;
+  border-radius: 10px;
+  height: 25vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3em;
 }
 
-.App-link {
-  color: #61dafb;
+.error {
+  animation: titilar .5s alternate 5;
 }
 
-@keyframes App-logo-spin {
+@keyframes titilar {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
+
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+.grafico {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grafico img {
+  width: 50%;
 }
