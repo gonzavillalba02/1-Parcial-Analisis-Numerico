@@ -3,7 +3,7 @@ import Chart from 'chart.js/auto';
 
 const CubicFunctionChart = ({funcion}) => {
   const chartRef = useRef();
-  const chartInstanceRef = useRef(null); // Mantén una referencia al objeto de instancia de Chart
+  const chartInstanceRef = useRef(null); 
 
   let func = funcion;
   func = func.replace("cos", "Math.cos");
@@ -17,30 +17,24 @@ const CubicFunctionChart = ({funcion}) => {
   useEffect(() => {
     const ctx = chartRef.current.getContext('2d');
 
-    // Función para calcular y
     const calcularY = (x) => { 
         return eval(func);
     };
 
-    // Generar valores de x con paso de 0.1
     const xValues = [];
     for (let i = -10; i <= 10; i++) {
       xValues.push(i);
     }
 
-    // Generar valores de y correspondientes
     const yValues = xValues.map(calcularY);
 
-    // Generar labels para el eje x
     const xLabels = Array.from({ length: 21 }, (_, index) => index - 10);
 
-    // Si ya existe una instancia de Chart, actualiza sus datos
     if (chartInstanceRef.current) {
       chartInstanceRef.current.data.datasets[0].data = yValues;
       chartInstanceRef.current.data.labels = xLabels;
-      chartInstanceRef.current.update(); // Actualiza el gráfico con los nuevos datos
+      chartInstanceRef.current.update(); 
     } else {
-      // Si no hay una instancia de Chart, crea una nueva
       chartInstanceRef.current = new Chart(ctx, {
         type: 'line',
         data: {

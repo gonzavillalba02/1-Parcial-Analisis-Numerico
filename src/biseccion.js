@@ -4,7 +4,7 @@ const biseccion = (a, b, fun, max_iter=1000) => {
     funcion = funcion.replace("cos", "Math.cos");
     funcion = funcion.replace("sen", "Math.sin");
     funcion = funcion.replace("tan", "Math.tan");
-    funcion = funcion.replace("atan", "Math.atan");
+    funcion = funcion.replace("aMath.tan", "Math.atan");
     funcion = funcion.replace("e**", "Math.exp");
     funcion = funcion.replace("log", "Math.log");
     funcion = funcion.replace("sqrt", "Math.sqrt");
@@ -14,6 +14,8 @@ const biseccion = (a, b, fun, max_iter=1000) => {
         let x = num;
         return eval(funcion)
     }
+
+    console.log(valuar())
 
 
     if (valuar(a) === 0) {
