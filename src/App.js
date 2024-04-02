@@ -125,7 +125,7 @@ function App() {
             }
             >Calcular</button>
             <div className={"results" + (error ? " error" : "")}>
-              {!error ? msj : "Ha ocurrido un error. Por favor revise si ingreso correctamente la formula. Recuerde colocar ( ) dividiendo las operaciones. Funciones: sen(), cos(), tan(), atan(), tanh(), cosh(), senh(), e**()."}
+              {!error ? msj : "Ha ocurrido un error. Por favor revise si ingreso correctamente la formula. Recuerde colocar ( ) dividiendo las operaciones. Funciones: sen(), cos(), tan(), atan(), tanh(), cosh(), senh(), e**(), sqrt()."}
             </div>
           </div>
           <div className="grafico">

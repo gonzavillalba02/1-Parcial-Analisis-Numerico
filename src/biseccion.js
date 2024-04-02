@@ -1,7 +1,6 @@
 const biseccion = (a, b, fun, max_iter=1000) => {
 
     let funcion = fun;
-    console.log(funcion)
     funcion = funcion.replace("cos", "Math.cos");
     funcion = funcion.replace("sen", "Math.sin");
     funcion = funcion.replace("tan", "Math.tan");
@@ -9,15 +8,12 @@ const biseccion = (a, b, fun, max_iter=1000) => {
     funcion = funcion.replace("e**", "Math.exp");
     funcion = funcion.replace("log", "Math.log");
     funcion = funcion.replace("sqrt", "Math.sqrt");
-    console.log(funcion)
 
 
     const valuar = (num) => {
         let x = num;
         return eval(funcion)
     }
-
-    console.log(valuar(1))
 
 
     if (valuar(a) === 0) {

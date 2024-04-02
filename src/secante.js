@@ -18,10 +18,14 @@ const secante = (a, b, fun, max_iter=1000) => {
     let x1 = b;
 
     while (true) {
-        let x2 = x1 - ((valuar(x1)*(x0 - x1)) / (valuar(x0)-valuar(x1)));
+        if (valuar(x0) !== valuar(x1)){
+            var x2 = x1 - ((valuar(x1)*(x0 - x1)) / (valuar(x0)-valuar(x1)));
+        } else {
+            return "La mayor aproximación encontrada por Secante fue ("+x2+",0)"
+        }
+        console.log(x2)
         if (valuar(x2) !== 0) {
             cont++;
-            console.log(cont)
             x0 = x1;
             x1 = x2;
         } else {
