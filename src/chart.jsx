@@ -7,7 +7,7 @@ const CubicFunctionChart = ({funcion}) => {
 
   let func = funcion;
   func = func.replace("cos", "Math.cos");
-  func = func.replace("sin", "Math.sin");
+  func = func.replace("sen", "Math.sin");
   func = func.replace("tan", "Math.tan");
   func = func.replace("aMath.tan", "Math.atan");
   func = func.replace("e**", "Math.exp");

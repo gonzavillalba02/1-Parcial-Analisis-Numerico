@@ -2,7 +2,7 @@ const newton = (a, fun, max_iter=1000) => {
 
     let funcion = fun;
     funcion = funcion.replace("cos", "Math.cos");
-    funcion = funcion.replace("sin", "Math.sin");
+    funcion = funcion.replace("sen", "Math.sin");
     funcion = funcion.replace("tan", "Math.tan");
     funcion = funcion.replace("atan", "Math.atan");
     funcion = funcion.replace("e**", "Math.exp");
