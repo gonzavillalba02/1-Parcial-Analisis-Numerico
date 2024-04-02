@@ -35,7 +35,7 @@ const biseccion = (a, b, fun, max_iter=1000) => {
                 return "La mayor aproximación encontrada por el metodo de Bisección fue (" + c + ",0)"
             }
             if (valuar(c) === 0){
-                return "La raiz encontrada por bisección es ("+c+","+valuar(c)+")"
+                return "La raiz encontrada por Bisección es ("+c+","+valuar(c)+")"
             } else {
                 if (valuar(a)*valuar(c)<0){
                     b = c;
