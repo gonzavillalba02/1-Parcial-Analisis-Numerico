@@ -30,7 +30,7 @@ function App() {
     <div className="App">
       <header className="header">
         <h1 className="nombre">Gonzalo Emiliano Villalba</h1>
-        <h2 className="docu">44.444.859</h2>
+        <h2 className="docu">DNI</h2>
       </header>
       <main>
         <form className="form">
